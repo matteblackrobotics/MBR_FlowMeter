@@ -1,11 +1,8 @@
-#include "Utilities.h"
-#include "OLED.h"
-#include "FlowMeter.h"
 #include <MBR_FlowMeter.h>
 
 MBR_FlowMeter flowMeter1(A2);
 
-float MBR_flowRate;
+float flowRate;
 
 void setup() 
 {
@@ -14,7 +11,7 @@ void setup()
 
 void loop() 
 {
-  MBR_flowRate = flowMeter1.read();
+  flowRate = flowMeter1.read();
   flowMeter1.print();
-  Serial.println():
+  Serial.println();
 }
